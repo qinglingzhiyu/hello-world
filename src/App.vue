@@ -1,17 +1,33 @@
+<!--
+ * @Author: Terris
+ * @Github: https://github.com/qinglingzhiyu
+ * @Date: 2019-08-07 17:33:14
+ * @LastEditors: Terris
+ * @LastEditTime: 2019-08-11 16:31:09
+ * @Description: 
+ -->
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img src="./assets/logo.png">
+    <div>
+      <el-button>el-button</el-button>
+    </div>
+    <!-- form test -->
+    <form-test :title="title"></form-test>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import FormTest from './components/Formtest';
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    FormTest
+  },
+  data () {
+    return {
+      title: '自定义组件'
+    }
   }
 }
 </script>
